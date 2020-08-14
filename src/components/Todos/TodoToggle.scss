@@ -1,0 +1,38 @@
+.toggle-wrap {
+  position: absolute;
+  top: 3.5rem;
+  left: 1rem;
+  width: 240px;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 4px;
+  background: #555555;
+
+
+  ul {
+
+    margin: 0;
+    padding: 1rem;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 28px;
+    top: -7px;
+    border-bottom: 7px solid #555555;
+    opacity: 1;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+
+}

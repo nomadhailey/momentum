@@ -2,6 +2,21 @@ body {
   // background: url(https://source.unsplash.com/random);
   // background: url(https://source.unsplash.com/category/nature/daily);
   background: url(https://source.unsplash.com/collection/9585833/1600x900/daily);
+
   // background-size: cover;
   //1920X1080
+  .Container {
+    position: relative;
+  }
+
+  .mainTodoBtn {
+    position: absolute;
+    bottom: 15px;
+    right: 27px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #fff;
+  }
 }
