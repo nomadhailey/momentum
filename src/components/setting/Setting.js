@@ -11,8 +11,8 @@ export default function Setting() {
 
   let settingList = [
     {id: 1, text: "Weather", check: true},
-    {id: 2, text: "Todo", check: true},
-    {id: 3, text: "Quotes", check: false},
+    {id: 2, text: "Todos", check: true},
+    {id: 3, text: "Clock", check: false},
   ];
 
   const LS_SETTING = localStorage.getItem("setting");
@@ -39,9 +39,13 @@ export default function Setting() {
           case "Weather":
             document.querySelector(".weather-btn").classList.add("hidden");
             break;
-          case "Todo":
+          case "Todos":
+              document.querySelector(".mainTodoBtn").classList.add("hidden");
             break;
-          case "Quotes":
+          case "Clock":
+                    document
+                      .querySelector(".clock")
+                      .classList.add("hidden");
             break
           default:
             console.log("초기화 실패");
@@ -64,6 +68,14 @@ export default function Setting() {
           document.querySelector(".weather-btn").classList.add("hidden");
           settingList[0].check = false;
           break;
+        case "Todos":
+          document.querySelector(".mainTodoBtn").classList.add("hidden");
+          settingList[1].check = false;
+          break;
+        case "Clock":
+          document.querySelector(".clock").classList.add("hidden");
+          settingList[2].check = false;
+          break;
         default:
           console.log("알 수 없는 에러");
       }
@@ -73,6 +85,14 @@ export default function Setting() {
         case "Weather":
           document.querySelector(".weather-btn").classList.remove("hidden");
           settingList[0].check = true;
+          break;
+        case "Todos":
+          document.querySelector(".mainTodoBtn").classList.remove("hidden");
+          settingList[1].check = true;
+          break;
+        case "Clock":
+          document.querySelector(".clock").classList.remove("hidden");
+          settingList[2].check = true;
           break;
         default:
           console.log("알 수 없는 에러");

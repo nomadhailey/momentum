@@ -1,5 +1,11 @@
-.weather-btn.hidden {
-  display: none;
+.weather-btn.hidden,
+.clock.hidden,
+.mainTodoBtn.hidden {
+  display: none !important;
+}
+.mainTodoBtn,
+.clock {
+  display: block !important;
 }
 .weather-btn {
   all: unset;
