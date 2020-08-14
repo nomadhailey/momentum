@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "text": "리액트 해커톤",
+      "checked": false,
+      "double": false
+    },
+    {
+      "id": 2,
+      "text": "test",
+      "checked": false,
+      "double": false
+    },
+    {
+      "id": 4,
+      "text": "test",
+      "checked": true,
+      "double": false
+    },
+    {
+      "id": 5,
+      "text": "estest",
+      "checked": true,
+      "double": false
+    }
+  ]
+}

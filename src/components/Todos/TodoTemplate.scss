@@ -1,0 +1,77 @@
+.TodoTemplate {
+  position: absolute;
+  right: 10px;
+  bottom: 50px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.85);
+
+  .app-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    color: white;
+
+    // justify-content: center;
+  }
+
+  .content {
+    max-height: 350px;
+    overflow-y: scroll;
+
+    transition: all 0.5s ease-out;
+    transition-property: opacity, height;
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: #666;
+    }
+
+    &::-webkit-scrollbar-button {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .app-toggle {
+    position: absolute;
+    right: 15px;
+    color: #fff;
+  }
+
+  .toggle-msg {
+    text-align: center;
+    color: #999;
+  }
+
+
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: 28px;
+
+    bottom: -7px;
+    border-top: 7px solid rgba(0, 0, 0, 0.85);
+    opacity: 1;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+
+}

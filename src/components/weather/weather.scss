@@ -1,0 +1,137 @@
+.weather-btn.hidden,
+.clock.hidden,
+.mainTodoBtn.hidden {
+  display: none !important;
+}
+.mainTodoBtn,
+.clock {
+  display: block !important;
+}
+.weather-btn {
+  all: unset;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  margin: 12px 15px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  text-align: right;
+  .btn-icon {
+    font-size: 1em;
+    margin: 0 7px;
+  }
+  .btn-temp{
+    font-size: 1.5em;
+    color: #fff;
+  }
+  .btn-city {
+   color: #fff; 
+   font-size: 0.8em;
+  }
+  .weather-container {
+    display: none;
+  }
+  &.active {
+  .weather-container {
+    text-align: left;
+    cursor: initial;
+    display: block;
+    width: 455px;
+    height: 205px;
+    border-radius: 6px;
+    background: #0f0f0fec;
+    box-sizing: border-box;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    margin: 10px;
+    padding: 15px 20px;
+    padding-bottom: 0;
+    color: #fff;
+      &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      right: 20px;
+      transform: rotate(45deg);
+      width: 15px;
+      height: 15px;
+      background: #0f0f0fec;
+    }
+    .city-detail {
+      text-transform: capitalize;
+      .city {
+        span {
+          margin-left: 10px;
+          font-size: 0.9em;
+          color: #aaa;
+        }
+      }
+      .description {
+        color: #aaa;
+      }
+    }
+    .active-day {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 3em;
+      p {
+        padding: 5px 10px;
+        span {
+          font-size: 0.7em;
+          color: #aaa;
+        }
+      }
+    }
+      ul {
+        width: 415px;
+        height: 55px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin-top: 15px;
+        padding: 10px 0;
+        padding-bottom: 0;
+        font-size: 0.8em;
+        border-top: 1px solid #aaa;
+        li {
+          color: #fff;
+          width: 75px;
+          height: 45px;
+          border-radius: 5px;
+          margin: 0 2px;
+          padding: 5px;
+          cursor: pointer;
+          &:hover,
+          &.active {
+            background: rgb(51, 51, 51);
+          }
+          .day-name {
+            text-align: center;
+          }
+          .day {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+              font-size: 1.25em;
+            }
+            p {
+              padding-top: 5px;
+              padding-left: 5px;
+              span {
+                color: #aaa;
+              }
+            }
+          }
+        }
+      }
+    }   
+  }
+}
