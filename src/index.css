@@ -22,7 +22,12 @@ html {
 
 body {
   margin: 0;
+<<<<<<< HEAD
   font-family: "Noto Sans KR", sans-serif;
+=======
+  font-family: 'Noto Sans KR', sans-serif;
+  background: rgb(49, 49, 49);
+>>>>>>> feature/settings
 }
 
 /**
