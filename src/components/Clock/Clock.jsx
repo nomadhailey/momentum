@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import classNames from "classnames";
 import "./Clock.scss";
 export default function ClockContainer() {
@@ -11,11 +11,12 @@ export default function ClockContainer() {
     return function cleanup() {
       clearInterval(timerID);
     };
-  });
+  }, []);
   function tick() {
     setDate(new Date());
   }
   useEffect(() => {
+    greet();
     const greetID = setInterval(() => greet(), 1000);
     return function cleanup() {
       clearInterval(greetID);
@@ -36,12 +37,12 @@ export default function ClockContainer() {
     </div>
   );
 }
-export function Clock({hour, min, greeting}) {
+export function Clock({ hour, min, greeting }) {
   const [inputname, setInputName] = useState({
     name: "",
     inputBoxisHidden: false,
   });
-  const {name, inputBoxisHidden} = inputname;
+  const { name, inputBoxisHidden } = inputname;
   const [userNameisHidden, setUserNameisHidden] = useState(true);
   // useEffect(() => {
   //   setName(name ? localStorage.getItem("name") : "");
@@ -64,7 +65,7 @@ export function Clock({hour, min, greeting}) {
   };
   const onChangeName = (e) => {
     setInputName({
-      name: e.target.value,
+      ...inputname,
       inputBoxisHidden: false,
     });
     setUserNameisHidden(true);
@@ -73,10 +74,9 @@ export function Clock({hour, min, greeting}) {
     const getName = localStorage.getItem("name");
     if (getName !== null) {
       // setInputName({ name: getName, inputBoxisHidden: true });
-      setInputName({name: getName, inputBoxisHidden: true});
+      setInputName({ name: getName, inputBoxisHidden: true });
       setUserNameisHidden(false);
     }
-    console.log(name);
   }, [name]);
   return (
     <div className="clockWrapper">
@@ -87,16 +87,16 @@ export function Clock({hour, min, greeting}) {
         <span>{greeting}, </span>
         <input
           type="text"
-          className={classNames("userName", {inputBoxisHidden})}
+          className={classNames("userName", { inputBoxisHidden })}
           value={name}
           onChange={onInputName}
           onKeyDown={onSaveName}
           size="5"
-          maxlength="22"
+          maxLength="22"
         />
         <span
           className="savedName"
-          style={{display: userNameisHidden ? "none" : "inline-block"}}
+          style={{ display: userNameisHidden ? "none" : "inline-block" }}
           onDoubleClick={onChangeName}
         >
           {name}
