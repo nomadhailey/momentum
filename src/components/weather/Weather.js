@@ -21,6 +21,7 @@ export default function Weather() {
       temp: 0, 
     },
     daily: [],
+    loading: false,
   });
   const [city, setCity] = useState({
 
@@ -57,8 +58,8 @@ export default function Weather() {
     }
   }, [])
 
-  const handleClickOutside = (event) => {
-    if (btnRef.current && !btnRef.current.contains(event.target))  {
+  const handleClickOutside = (e) => {
+    if (btnRef.current && !btnRef.current.contains(e.target)) {
       btnRef.current.classList.remove("active");
     } else {
       btnRef.current.classList.add("active");
@@ -72,7 +73,7 @@ export default function Weather() {
   },[]);
   return (
     <>
-      <button ref={btnRef} className="weather-btn">
+      <button ref={ btnRef } className="weather-btn">
         <div>
           <p className="btn-temp" title={ weather.current.weather[0].description }><i className={ "btn-icon wi " + weather.current.weather[0].main }></i>{ Math.round(weather.current.temp) }°</p>
           <p className="btn-city" title={ city.name }>{ city.name }</p>
