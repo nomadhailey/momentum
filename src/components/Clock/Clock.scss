@@ -1,0 +1,33 @@
+.clockWrapper {
+  margin-top: 20vh;
+  .clock {
+    font-size: 9em;
+    text-align: center;
+  }
+  .greetings {
+    font-size: 3em;
+    // position: absolute;
+    // width: 100%;
+    // top: 50%;
+    // overflow: hidden;
+    // white-space: nowrap;
+
+    // margin-bottom: 10px;
+    .userName {
+      font-size: 1rem;
+      all: unset;
+      border-bottom: 2px solid #fff;
+      line-height: 40px;
+      text-align: center;
+      &.inputBoxisHidden {
+        display: none;
+        // border-bottom: none;
+        // user-select: none;
+      }
+    }
+    .savedName {
+      display: none;
+      text-align: left;
+    }
+  }
+}
