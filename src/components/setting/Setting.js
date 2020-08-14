@@ -12,7 +12,7 @@ export default function Setting() {
   let settingList = [
     {id: 1, text: "Weather", check: true},
     {id: 2, text: "Todos", check: true},
-    {id: 3, text: "Clock", check: false},
+    {id: 3, text: "Clock", check: true},
   ];
 
   const LS_SETTING = localStorage.getItem("setting");
