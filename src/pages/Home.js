@@ -9,6 +9,8 @@ import TodosApp from "../TodosApp";
 
 import ClockContainer from "../components/Clock/Clock";
 import MainTodoContainer from "../components/MainTodo/MainTodoContainer";
+import Weather from "../components/weather/Weather";
+import Setting from "../components/setting/Setting";
 
 export default function Home() {
   const [showTodos, setShowTodos] = useState(false);
@@ -20,10 +22,12 @@ export default function Home() {
     <div className="Container">
       <ClockContainer />
       <MainTodoContainer />
-
+      <Weather />
+      <Setting />
       {showTodos && <TodosApp />}
       <button className="mainTodoBtn" onClick={todosBtnClick}>
         todos
       </button>
+    </div>
   );
 }
