@@ -1,9 +1,10 @@
 .inputContainer {
+  margin-top: 10px;
   &.hidden {
     display: none;
   }
   .focus {
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin: 10px 0;
   }
   .inputTodo {
@@ -19,6 +20,7 @@
   }
 }
 .todoContainer {
+  padding-top: 10px;
   text-align: center;
   font-style: bold;
   &.hidden {

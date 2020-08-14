@@ -30,7 +30,7 @@ export default function ClockContainer() {
   function greet() {
     if (hour >= 5 && hour < 12) {
       setGreeting("Good morning");
-    } else if (hour >= 12 && hour < 18) {
+    } else if (hour >= 12 && hour < 17) {
       setGreeting("Good afternoon");
     } else {
       setGreeting("Good evening");
