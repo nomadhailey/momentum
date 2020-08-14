@@ -1,4 +1,6 @@
+
 import React, { useState } from "react";
+
 import "../components/Background/Background.scss";
 import "../components/Clock/Clock.scss";
 import "../components/MainTodo/MainTodo.scss";
@@ -18,10 +20,10 @@ export default function Home() {
     <div className="Container">
       <ClockContainer />
       <MainTodoContainer />
+
       {showTodos && <TodosApp />}
       <button className="mainTodoBtn" onClick={todosBtnClick}>
         todos
       </button>
-    </div>
   );
 }

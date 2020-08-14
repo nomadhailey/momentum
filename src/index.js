@@ -4,7 +4,10 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/weather
 ReactDOM.render(
     <App />,
   document.getElementById("root")

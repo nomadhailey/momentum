@@ -1,0 +1,25 @@
+.setting-btn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 14px 18px;
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+  &.active {
+        svg {
+      opacity: 1;
+      transform: rotate(45deg);
+    }
+  }
+  svg {
+    font-size: 1.4em;
+    color: #fff;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+}
